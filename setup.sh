@@ -144,7 +144,6 @@ fi
 
 json=$(curl -s -k "https://api.github.com/gists/2fd454ffabbdb11300a03e20e99b367b"\
  -H 'Accept: application/vnd.github.v3+json'\
- -H 'Authorization: token 264d1eb51d0e9272d3ce00ae20f4a5e3a8997918'\
  | jq -r --tab '.files[]')
 #populate $filename
 #filename="$(jq -r '.filename' <<< $json)"
