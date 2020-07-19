@@ -9,7 +9,12 @@ Download and double click [theme-toggler-smoothly.alfredworkflow](theme-toggler-
 Here is how the workflow nodes look like:
 
 * `click to play video`
-[![setup custom](2020-07-18_21-14-12.png)](theme-toggler-smoothly.mp4)
+
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" width="853" height="360" poster="2020-07-18_21-14-12.png">
+    <source src="theme-toggler-smoothly.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Usage ##
 * `theme-setup` will automatically download gist from github and setup all workflow.
