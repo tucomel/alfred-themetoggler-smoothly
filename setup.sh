@@ -108,13 +108,13 @@ if [ "$type" == "nightshift" ]; then
     if ! [ "$blueReductionMode" -eq 0 ]; then
         nightShiftEnabled=$($PLISTBUDDY -c "print :BlueReductionEnabled" $nightShiftFile)
         #echo "nightShiftEnabled : $nightShiftEnabled"
-        dsHour=$($PLISTBUDDY -c "print :BlueLightReductionSchedule:DayStartHour" $nightShiftFile)
+        dsHour=$(printf "%02d" $($PLISTBUDDY -c "print :BlueLightReductionSchedule:DayStartHour" $nightShiftFile))
         #echo "DayStartHour : "$dsHour
-        dsMin=$($PLISTBUDDY -c "print :BlueLightReductionSchedule:DayStartMinute" $nightShiftFile)
+        dsMin=$(printf "%02d" $($PLISTBUDDY -c "print :BlueLightReductionSchedule:DayStartMinute" $nightShiftFile))
         #echo "DayStartMinute : "$dsMin
-        nsHour=$($PLISTBUDDY -c "print :BlueLightReductionSchedule:NightStartHour" $nightShiftFile)
+        nsHour=$(printf "%02d" $($PLISTBUDDY -c "print :BlueLightReductionSchedule:NightStartHour" $nightShiftFile))
         #echo "NightStartHour : "$nsHour
-        nsMin=$($PLISTBUDDY -c "print :BlueLightReductionSchedule:NightStartMinute" $nightShiftFile)
+        nsMin=$(printf "%02d" $($PLISTBUDDY -c "print :BlueLightReductionSchedule:NightStartMinute" $nightShiftFile))
         #echo "NightStartMinute : "$nsMin
     else
         echo "You must set night-shift options at preferences > displays > night shift"
